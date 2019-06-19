@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const ProductSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: "users"
+    ref: "user"
   },
   category: {
     type: Schema.Types.ObjectId,
-    ref: "categories"
+    ref: "category"
   },
   name: {
     type: String,
@@ -24,4 +24,4 @@ const ProductSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model("products", ProductSchema);
+module.exports = mongoose.model("product", ProductSchema);
