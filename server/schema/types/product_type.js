@@ -18,7 +18,8 @@ const ProductType = new GraphQLObjectType({
       }
     },
     description: { type: GraphQLString },
-    weight: { type: GraphQLInt }
+    weight: { type: GraphQLInt },
+    cost: { type: GraphQLInt }
   })
 });
 
