@@ -35,7 +35,7 @@ const RootQueryType = new GraphQLObjectType({
       }
     },
     categories: {
-      type: CategoryType,
+      type: new GraphQLList(CategoryType),
       resolve() {
         return Category.find({});
       }
@@ -48,7 +48,7 @@ const RootQueryType = new GraphQLObjectType({
       }
     },
     products: {
-      type: ProductType,
+      type: new GraphQLList(ProductType),
       resolve() {
         return Product.find({});
       }
