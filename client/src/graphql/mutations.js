@@ -10,9 +10,20 @@ export const LOGIN_USER = gql`
 `;
 
 export const VERIFY_USER = gql`
-mutation VerifyUser($token: String!) {
-  verifyUser(token: $token) {
-    loggedIn
+  mutation VerifyUser($token: String!) {
+    verifyUser(token: $token) {
+      loggedIn
+    }
   }
-}
+`;
+
+export const REGISTER_USER = gql`
+  mutation NewUser($name: String!, $email: String!, $password: String!) {
+    register(name: $name, email: $email, password: $password) {
+      name,
+      email,
+      token,
+      loggedIn
+    }
+  }
 `;
